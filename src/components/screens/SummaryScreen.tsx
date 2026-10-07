@@ -25,21 +25,8 @@ export const SummaryScreen: React.FC<SummaryScreenProps> = ({
 
   const handleCelebrateVoice = () => {
     soundFx.playClick();
-    const topScore = sortedTeams[0].score;
-    const topTeams = sortedTeams
-      .filter((t) => t.score === topScore)
-      .map((t) => t.name)
-      .join(' và ');
-
-    let script =
-      'Xin nhiệt liệt chúc mừng cả lớp chúng ta! Cả bốn ổ khóa kiến thức đã được mở trọn vẹn! Chiếc micro công lí đã bừng sáng rực rỡ! ';
-    script += 'Sau đây là bảng xếp hạng chung cuộc: ';
-    sortedTeams.forEach((t, i) => {
-      script += `Hạng ${i + 1}: ${t.name}, đạt ${t.score} điểm. `;
-    });
-    script += `Xin nồng nhiệt chúc mừng ${topTeams} đã xuất sắc dẫn đầu tiết học hôm nay! `;
-    script +=
-      'Và thông điệp quý giá nhất chúng ta cùng khắc ghi chính là: Ai cũng xứng đáng được tôn trọng!';
+    const script =
+      'Xin nhiệt liệt chúc mừng cả lớp chúng ta! Cả bốn ổ khóa kiến thức đã được mở trọn vẹn! Chiếc micro công lí đã bừng sáng rực rỡ! Xin nồng nhiệt biểu dương các đội chơi đã xuất sắc hoàn thành thử thách. Và thông điệp quý giá nhất chúng ta cùng khắc ghi hôm nay chính là: Ai cũng xứng đáng được tôn trọng!';
 
     narrator.speak(script, {
       audioId: 'celebrate',

@@ -94,7 +94,7 @@ export const GameplayScreen: React.FC<GameplayScreenProps> = ({
         'Vị trí một: Lời hứa giải phóng. Vị trí hai: Thực trạng sau một trăm năm. Thẻ A: Văn kiện giải phóng mở ra hi vọng tự do cho người nô lệ da đen. Thẻ B: Người da đen vẫn chịu phân biệt, nghèo đói và bị đẩy ra bên lề xã hội.';
     } else if (challenge.type === 'ordering') {
       script +=
-        'Hãy sắp xếp ba thẻ theo đúng mạch lập luận từ thực trạng bất công đến lời kêu gọi hành động vì công lí.';
+        'Hãy sắp xếp ba thẻ theo đúng tiến trình lập luận từ thực trạng đến lời kêu gọi: Thẻ A: Vì vậy, không thể tiếp tục trì hoãn hành động vì công lí và bình đẳng. Thẻ B: Sau một trăm năm, người da đen vẫn chịu bất công. Thẻ C: Quyền tự do, bình đẳng chưa được bảo đảm trong thực tế.';
     }
 
     narrator.speak(script, {
@@ -108,19 +108,20 @@ export const GameplayScreen: React.FC<GameplayScreenProps> = ({
   // Handle Voice for Explanation
   const handleReadExplanation = () => {
     soundFx.playClick();
-    let script = `Sau đây là đáp án và lời giải của ${challenge.title}. `;
+    let script = '';
     if (challenge.id === 1) {
-      script += 'Đáp án chính xác là: B. Chống phân biệt chủng tộc, đòi quyền tự do và bình đẳng. ';
+      script =
+        'Đáp án chính xác là phương án B: Chống phân biệt chủng tộc, đòi quyền tự do và bình đẳng. Lời giải thích: Các luận điểm của bài diễn văn đều hướng tới việc lên án sự phân biệt đối xử và kiên quyết đòi lại quyền tự do, bình đẳng thiêng liêng cho người da đen. Đây chính là luận đề bao trùm toàn bộ văn bản.';
     } else if (challenge.id === 2) {
-      script +=
-        'Đáp án chính xác: Vị trí một ghép với Thẻ A: Văn kiện giải phóng mở ra hi vọng tự do. Vị trí hai ghép với Thẻ B: Người da đen vẫn chịu phân biệt, nghèo đói. ';
+      script =
+        'Đáp án chính xác: Vị trí một ghép với Thẻ A: Văn kiện giải phóng mở ra hi vọng tự do cho người nô lệ da đen. Vị trí hai ghép với Thẻ B: Người da đen vẫn chịu phân biệt, nghèo đói và bị đẩy ra bên lề xã hội. Lời giải thích: Tác giả chỉ ra khoảng cách giữa lời hứa tự do và thực trạng bất công, tạo cơ sở thực tế vững chắc cho lời kêu gọi hành động.';
     } else if (challenge.id === 3) {
-      script += 'Đáp án chính xác là: C. Tính cấp thiết của việc hành động vì công lí, bình đẳng. ';
+      script =
+        'Đáp án chính xác là phương án C: Tính cấp thiết của việc hành động vì công lí, bình đẳng. Lời giải thích: Điệp ngữ Đây là lúc tạo nên âm hưởng dồn dập, đanh thép, thúc giục biến lời hứa dân chủ thành hiện thực ngay lập tức và khẳng định không thể tiếp tục chần chừ hay trì hoãn.';
     } else if (challenge.id === 4) {
-      script +=
-        'Trình tự sắp xếp đúng trên cây cầu lập luận là Thẻ B, đến Thẻ C, rồi đến Thẻ A. ';
+      script =
+        'Trình tự sắp xếp chính xác trên cây cầu lập luận là Thẻ B, đến Thẻ C, rồi đến Thẻ A. Bước một: Sau một trăm năm, người da đen vẫn chịu bất công. Bước hai: Quyền tự do, bình đẳng chưa được bảo đảm trong thực tế. Bước ba: Vì vậy, không thể tiếp tục trì hoãn hành động vì công lí và bình đẳng. Mạch lập luận đi từ sự thật hiển nhiên đến kết luận tất yếu.';
     }
-    script += `Lời giải thích: ${challenge.explanation}. ${challenge.discussion}`;
 
     narrator.speak(script, {
       audioId: challenge.audioAnswerId,

@@ -96,7 +96,7 @@ export const DISCOURSE_MESSAGES: DiscourseMessage[] = [
     title: "Sức mạnh của sự thật",
     quote: "“Một lời hứa công lí chỉ có ý nghĩa khi nó được thắp sáng trong cuộc sống hàng ngày.”",
     lesson: "Dám nhìn thẳng vào khoảng cách giữa lời hứa và thực tế để thúc đẩy sự thay đổi tiến bộ.",
-    audioScript: "Thông điệp từ Ổ khóa hai: Một lời hứa công lí chỉ có ý nghĩa khi được chuyển hóa thành hiện thực. Chúng ta phải dám nhìn thẳng vào thực trạng bất công để chung tay thay đổi.",
+    audioScript: "Thông điệp từ Ổ khóa hai: Một lời hứa công lí chỉ có ý nghĩa khi nó được thắp sáng trong cuộc sống hàng ngày. Chúng ta phải dám nhìn thẳng vào thực tế để cùng nhau thay đổi.",
     audioId: "discourse2",
   },
   {
@@ -105,7 +105,7 @@ export const DISCOURSE_MESSAGES: DiscourseMessage[] = [
     title: "Hành động vì lẽ phải",
     quote: "“Thời điểm tốt nhất để đứng lên vì lẽ phải và lòng nhân ái luôn là ngay bây giờ.”",
     lesson: "Không thể trì hoãn sự tử tế và lẽ công bằng. Hãy hành động ngay từ hôm nay.",
-    audioScript: "Thông điệp từ Ổ khóa ba: Thời điểm tốt nhất để đứng lên bảo vệ lẽ phải luôn là ngay bây giờ. Không thể tiếp tục trì hoãn khi sự bất công vẫn còn tồn tại quanh ta.",
+    audioScript: "Thông điệp từ Ổ khóa ba: Thời điểm tốt nhất để đứng lên vì lẽ phải và lòng nhân ái luôn là ngay bây giờ. Không thể tiếp tục trì hoãn khi sự bất công vẫn còn tồn tại quanh ta.",
     audioId: "discourse3",
   },
   {

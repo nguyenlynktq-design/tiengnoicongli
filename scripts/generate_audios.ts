@@ -174,8 +174,8 @@ async function generateAll() {
         }
       } catch (err: any) {
         if (err?.status === 429 || err?.message?.includes("429") || err?.message?.includes("quota")) {
-          console.log(`  -> Rate limited (429). Waiting 35 seconds before retry (attempt ${attempts}/6)...`);
-          await new Promise((r) => setTimeout(r, 35000));
+          console.log(`  -> Rate limited (429). Waiting 20 seconds before retry (attempt ${attempts}/5)...`);
+          await new Promise((r) => setTimeout(r, 20000));
         } else {
           console.error(`  -> Failed generating ${item.id}:`, err?.message || err);
           break;
@@ -183,8 +183,8 @@ async function generateAll() {
       }
     }
 
-    // Delay between successful requests to stay within 3 RPM
-    await new Promise((r) => setTimeout(r, 26000));
+    // Delay between requests
+    await new Promise((r) => setTimeout(r, 4000));
   }
 
   console.log("Audio generation completed!");
