@@ -25,7 +25,7 @@ export const ApplicationScreen: React.FC<ApplicationScreenProps> = ({
     soundFx.playClick();
     narrator.speak(CONCLUDING_SPEECH.text, {
       audioId: CONCLUDING_SPEECH.audioId,
-      title: 'LỜI ĐÚC KẾT BÀI HỌC (GIỌNG NỮ MIỀN BẮC HÀ NỘI)',
+      title: 'LỜI ĐÚC KẾT BÀI HỌC CỦA CÔ QUYÊN (GIỌNG NỮ HÀ NỘI)',
       promptGuidance:
         'Đọc lời đúc kết bài học với giọng nữ Hà Nội trầm ấm, trang trọng, giàu cảm xúc lắng đọng',
     });
@@ -50,7 +50,7 @@ export const ApplicationScreen: React.FC<ApplicationScreenProps> = ({
       `Ý kiến đóng góp của lớp: ${response.trim()}`,
       {
         audioId: 'custom-student-response',
-        title: 'TIẾNG NÓI HỌC SINH (GIỌNG NỮ MIỀN BẮC HÀ NỘI)',
+        title: 'TIẾNG NÓI HỌC SINH (CÔ QUYÊN ĐỌC LẠI)',
         promptGuidance:
           'Đọc lời chia sẻ chân thành, ấm áp, giàu tinh thần tôn trọng và thấu hiểu của học sinh',
       }
@@ -60,9 +60,14 @@ export const ApplicationScreen: React.FC<ApplicationScreenProps> = ({
   return (
     <div className="parchment-card p-6 md:p-10 max-w-4xl mx-auto shadow-2xl animate-in fade-in duration-300">
       <div className="text-center mb-6">
-        <span className="inline-block bg-[#fef3c7] text-[#d97706] border border-[#fcd34d] text-xs font-bold px-3.5 py-1 rounded-full uppercase tracking-wider mb-2">
-          Giai đoạn Vận dụng
-        </span>
+        <div className="flex items-center justify-center gap-2 mb-2 flex-wrap">
+          <span className="inline-block bg-[#fef3c7] text-[#d97706] border border-[#fcd34d] text-xs font-bold px-3.5 py-1 rounded-full uppercase tracking-wider">
+            Giai đoạn Vận dụng
+          </span>
+          <span className="bg-[#7f1d1d] text-white text-xs font-bold px-3 py-1 rounded-full shadow-xs">
+            👩‍🏫 Hướng dẫn: Cô Quyên
+          </span>
+        </div>
         <h2 className="font-serif-title text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#7f1d1d] mb-1.5">
           MICRO DÀNH CHO EM
         </h2>
@@ -89,13 +94,13 @@ export const ApplicationScreen: React.FC<ApplicationScreenProps> = ({
       {/* CONCLUDING SPEECH CARD */}
       <div className="bg-[#fffdf9] border border-[#dfd3be] border-l-4 border-l-[#d97706] rounded-r-2xl p-5 md:p-6 mb-6 shadow-xs">
         <div className="text-xs font-bold text-[#d97706] uppercase tracking-wider mb-1.5">
-          Lời đúc kết bài học:
+          Lời đúc kết bài học của Cô Quyên:
         </div>
         <blockquote className="font-serif-title text-sm md:text-base leading-relaxed text-[#27272a] italic mb-3">
           “{CONCLUDING_SPEECH.text}”
         </blockquote>
         <div className="text-[11px] text-[#78716c] pt-2 border-t border-dashed border-[#e2d7c3]">
-          {CONCLUDING_SPEECH.authorNote}
+          * Chú thích: Lời đúc kết do Cô Quyên biên soạn để định hướng bài học, không phải trích dẫn nguyên văn của tác giả Mác-tin Lu-thơ Kinh.
         </div>
 
         {/* Audio Controls cluster */}
@@ -107,10 +112,10 @@ export const ApplicationScreen: React.FC<ApplicationScreenProps> = ({
                 ? 'bg-[#fef3c7] border-[#d97706] text-[#92400e] reading-pulse'
                 : 'bg-[#fbf5e8] border-[#d97706] text-[#7f1d1d] hover:bg-[#fef3c7]'
             }`}
-            title="Nghe cô giáo đọc lời đúc kết bài học bằng giọng nữ Hà Nội"
+            title="Nghe Cô Quyên đọc lời đúc kết bài học bằng giọng nữ Hà Nội"
           >
             <Play className="w-3.5 h-3.5 fill-current" />
-            <span>{isConclusionPlaying ? 'Đang đọc...' : 'Nghe lời kết'}</span>
+            <span>{isConclusionPlaying ? 'Đang đọc...' : 'Nghe Cô Quyên đúc kết'}</span>
           </button>
 
           <button
@@ -165,7 +170,7 @@ export const ApplicationScreen: React.FC<ApplicationScreenProps> = ({
               title="Nghe giọng AI đọc ý kiến của lớp"
             >
               <Volume2 className="w-3.5 h-3.5 text-[#d97706]" />
-              <span>{isCustomPlaying ? 'Đang đọc...' : 'Cô giáo đọc lại ý kiến này'}</span>
+              <span>{isCustomPlaying ? 'Đang đọc...' : 'Cô Quyên đọc lại ý kiến này'}</span>
             </button>
           )}
         </div>

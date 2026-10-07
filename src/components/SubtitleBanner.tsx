@@ -25,7 +25,7 @@ export const SubtitleBanner: React.FC = () => {
 
       <div className="flex-1 min-w-0 text-[#fef3c7]">
         <div className="flex items-center gap-2 text-xs font-bold text-[#f59e0b] uppercase tracking-wider mb-0.5">
-          <span>{subState.title || 'CÔ GIÁO THUYẾT MINH (GIỌNG NỮ MIỀN BẮC HÀ NỘI)'}</span>
+          <span>{subState.title || 'CÔ QUYÊN THUYẾT MINH (GIỌNG NỮ MIỀN BẮC HÀ NỘI)'}</span>
           <span className="inline-flex items-center gap-0.5 h-3">
             <span className="w-0.5 h-2 bg-amber-400 rounded wave-bar-1" />
             <span className="w-0.5 h-3 bg-amber-400 rounded wave-bar-2" />

@@ -30,10 +30,9 @@ export const SummaryScreen: React.FC<SummaryScreenProps> = ({
 
     narrator.speak(script, {
       audioId: 'celebrate',
-      title: '🎉 VINH DANH THI ĐUA & KẾT QUẢ',
+      title: '🎉 VINH DANH THI ĐUA & KẾT QUẢ - CÔ QUYÊN',
       promptGuidance:
         'Xướng tên các đội và chúc mừng bằng giọng nữ Hà Nội hào hứng, reo vui, phấn khởi và nhiệt liệt',
-      playbackRate: 1.02,
     });
   };
 
@@ -45,9 +44,14 @@ export const SummaryScreen: React.FC<SummaryScreenProps> = ({
   return (
     <div className="parchment-card p-6 md:p-10 max-w-4xl mx-auto shadow-2xl animate-in fade-in duration-300">
       <div className="text-center mb-6">
-        <span className="inline-block bg-[#fef3c7] text-[#d97706] border border-[#fcd34d] text-xs font-bold px-3.5 py-1 rounded-full uppercase tracking-wider mb-2">
-          Tổng kết tiết học 1
-        </span>
+        <div className="flex items-center justify-center gap-2 mb-2 flex-wrap">
+          <span className="inline-block bg-[#fef3c7] text-[#d97706] border border-[#fcd34d] text-xs font-bold px-3.5 py-1 rounded-full uppercase tracking-wider">
+            Tổng kết tiết học 1
+          </span>
+          <span className="bg-[#7f1d1d] text-white text-xs font-bold px-3 py-1 rounded-full shadow-xs">
+            👩‍🏫 Giáo viên bộ môn: Cô Quyên
+          </span>
+        </div>
         <h2 className="font-serif-title text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#7f1d1d] mb-1.5">
           BẢN TỔNG KẾT BÀI HỌC VÀ THI ĐUA
         </h2>
@@ -64,10 +68,10 @@ export const SummaryScreen: React.FC<SummaryScreenProps> = ({
                 ? 'bg-amber-100 border-amber-500 text-amber-950 reading-pulse'
                 : 'bg-gradient-to-r from-[#b45309] to-[#d97706] text-white hover:from-[#92400e] hover:to-[#b45309] border-transparent'
             }`}
-            title="Nghe cô giáo AI công bố kết quả và chúc mừng các đội thi đua"
+            title="Nghe Cô Quyên công bố kết quả và chúc mừng các đội thi đua"
           >
             <Volume2 className="w-5 h-5" />
-            <span>{isCelebratePlaying ? 'Đang công bố kết quả...' : '🎉 Nghe công bố kết quả hào hứng'}</span>
+            <span>{isCelebratePlaying ? 'Đang công bố kết quả...' : '🎉 Nghe Cô Quyên công bố kết quả'}</span>
           </button>
         </div>
       </div>

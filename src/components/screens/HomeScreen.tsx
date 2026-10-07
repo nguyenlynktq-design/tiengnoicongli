@@ -36,9 +36,14 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
   return (
     <div className="parchment-card p-6 md:p-10 max-w-4xl mx-auto shadow-2xl animate-in fade-in duration-300">
       <div className="text-center max-w-3xl mx-auto">
-        <span className="inline-block bg-[#fef3c7] text-[#d97706] border border-[#fcd34d] text-xs md:text-sm font-bold px-3.5 py-1 rounded-full uppercase tracking-wider mb-3.5">
-          Hoạt động Luyện tập & Vận dụng (4–5 phút)
-        </span>
+        <div className="flex items-center justify-center gap-2 mb-3.5 flex-wrap">
+          <span className="inline-block bg-[#fef3c7] text-[#d97706] border border-[#fcd34d] text-xs md:text-sm font-bold px-3.5 py-1 rounded-full uppercase tracking-wider">
+            Hoạt động Luyện tập & Vận dụng (4–5 phút)
+          </span>
+          <span className="inline-flex items-center gap-1.5 bg-[#7f1d1d] text-white text-xs md:text-sm font-bold px-3 py-1 rounded-full shadow-xs">
+            👩‍🏫 Giáo viên: Cô Quyên
+          </span>
+        </div>
 
         <h1 className="font-serif-title text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#7f1d1d] mb-3.5 leading-tight">
           MỞ KHÓA TIẾNG NÓI CÔNG LÍ
@@ -101,10 +106,10 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
                 ? 'bg-[#fef3c7] border-[#d97706] text-[#92400e] reading-pulse'
                 : 'bg-[#f1ebd9] border-[#d7caa8] text-[#7f1d1d] hover:bg-[#e6ddc5]'
             }`}
-            title="Nghe lời giới thiệu mở đầu từ cô giáo trợ lí ảo (Giọng nữ miền Bắc Hà Nội)"
+            title="Nghe lời giới thiệu mở đầu từ Cô Quyên (Giọng nữ miền Bắc Hà Nội)"
           >
             <Volume2 className="w-5 h-5 text-[#d97706]" />
-            <span>{isIntroPlaying ? 'Đang đọc...' : '🎙️ Nghe giới thiệu (Giọng nữ Hà Nội)'}</span>
+            <span>{isIntroPlaying ? 'Đang đọc...' : '🎙️ Nghe Cô Quyên giới thiệu'}</span>
           </button>
 
           <button

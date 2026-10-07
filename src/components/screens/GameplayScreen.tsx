@@ -99,7 +99,7 @@ export const GameplayScreen: React.FC<GameplayScreenProps> = ({
 
     narrator.speak(script, {
       audioId: challenge.audioQuestionId,
-      title: `${challenge.title} (GIỌNG NỮ HÀ NỘI)`,
+      title: `${challenge.title} (CÔ QUYÊN ĐỌC)`,
       promptGuidance:
         'Đọc đề bài rõ ràng, phát âm từng phương án rành mạch, tốc độ vừa phải cho học sinh lắng nghe',
     });
@@ -125,7 +125,7 @@ export const GameplayScreen: React.FC<GameplayScreenProps> = ({
 
     narrator.speak(script, {
       audioId: challenge.audioAnswerId,
-      title: `ĐÁP ÁN & LỜI GIẢI (${challenge.title})`,
+      title: `ĐÁP ÁN & GIẢNG GIẢI CỦA CÔ QUYÊN (${challenge.title})`,
       promptGuidance:
         'Giảng giải đáp án bằng giọng nữ miền Bắc Hà Nội ân cần, sâu sắc, nhấn mạnh luận điểm văn học',
     });
@@ -266,10 +266,10 @@ export const GameplayScreen: React.FC<GameplayScreenProps> = ({
                   ? 'bg-[#fef3c7] border-[#d97706] text-[#92400e] reading-pulse'
                   : 'bg-white border-[#d7caa8] text-[#27272a] hover:bg-[#f9f5ec]'
               }`}
-              title="Nghe cô giáo đọc câu hỏi bằng giọng nữ Hà Nội"
+              title="Nghe Cô Quyên đọc câu hỏi bằng giọng nữ Hà Nội"
             >
               <Volume2 className="w-3.5 h-3.5 text-[#d97706]" />
-              <span>{isQuestionPlaying ? 'Đang đọc...' : 'Đọc câu hỏi'}</span>
+              <span>{isQuestionPlaying ? 'Đang đọc...' : 'Cô Quyên đọc câu hỏi'}</span>
             </button>
 
             {feedback && (
@@ -280,10 +280,10 @@ export const GameplayScreen: React.FC<GameplayScreenProps> = ({
                     ? 'bg-[#fef3c7] border-[#d97706] text-[#92400e] reading-pulse'
                     : 'bg-white border-[#d7caa8] text-[#27272a] hover:bg-[#f9f5ec]'
                 }`}
-                title="Nghe cô giáo đọc đáp án và phân tích chi tiết"
+                title="Nghe Cô Quyên đọc đáp án và phân tích chi tiết"
               >
                 <Volume2 className="w-3.5 h-3.5 text-[#d97706]" />
-                <span>{isAnswerPlaying ? 'Đang giảng...' : 'Đọc đáp án & giải thích'}</span>
+                <span>{isAnswerPlaying ? 'Đang giảng...' : 'Cô Quyên giảng giải'}</span>
               </button>
             )}
 
@@ -586,7 +586,7 @@ export const GameplayScreen: React.FC<GameplayScreenProps> = ({
                 title="Nghe cô đọc đáp án và phân tích chi tiết"
               >
                 <Volume2 className="w-3.5 h-3.5 text-[#d97706]" />
-                <span>{isAnswerPlaying ? 'Đang giảng...' : 'Nghe cô giảng giải'}</span>
+                <span>{isAnswerPlaying ? 'Đang giảng...' : 'Nghe Cô Quyên giảng giải'}</span>
               </button>
             </div>
 

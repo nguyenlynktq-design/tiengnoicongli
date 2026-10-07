@@ -51,7 +51,7 @@ export const DiscoursePanel: React.FC<DiscoursePanelProps> = ({
     soundFx.playClick();
     narrator.speak(msg.audioScript, {
       audioId: msg.audioId,
-      title: `🎙️ THÔNG ĐIỆP DIỄN VĂN (${msg.badge})`,
+      title: `🎙️ THÔNG ĐIỆP DIỄN VĂN (${msg.badge}) - CÔ QUYÊN ĐỌC`,
       promptGuidance:
         'Truyền đạt thông điệp nhân văn với giọng nữ Hà Nội đĩnh đạc, trầm ấm, truyền cảm hứng sâu sắc đến học sinh',
     });
@@ -87,7 +87,7 @@ export const DiscoursePanel: React.FC<DiscoursePanelProps> = ({
               ? 'bg-[#fef3c7] border-[#d97706] text-[#92400e] reading-pulse'
               : 'bg-[#fdf6e7] border-[#d97706] text-[#7f1d1d] hover:bg-[#fef3c7]'
           }`}
-          title="Nghe cô giáo truyền đạt thông điệp ý nghĩa này bằng giọng nữ miền Bắc"
+          title="Nghe Cô Quyên truyền đạt thông điệp ý nghĩa này bằng giọng nữ miền Bắc"
         >
           <Volume2 className="w-3.5 h-3.5" />
           <span>{isPlaying ? 'Đang đọc...' : 'Nghe thông điệp'}</span>

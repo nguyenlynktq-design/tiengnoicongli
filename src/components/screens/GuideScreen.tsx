@@ -27,9 +27,14 @@ export const GuideScreen: React.FC<GuideScreenProps> = ({ onBack, speakingId }) 
   return (
     <div className="parchment-card p-6 md:p-10 max-w-4xl mx-auto shadow-2xl animate-in fade-in duration-300">
       <div className="max-w-3xl mx-auto">
-        <h2 className="font-serif-title text-2xl md:text-3xl font-bold text-[#7f1d1d] mb-4">
-          Hướng dẫn tổ chức hoạt động lớp học
-        </h2>
+        <div className="flex items-center justify-between mb-4 flex-wrap gap-2 border-b border-[#ded3bd] pb-3">
+          <h2 className="font-serif-title text-2xl md:text-3xl font-bold text-[#7f1d1d]">
+            Hướng dẫn tổ chức hoạt động lớp học
+          </h2>
+          <span className="bg-[#fef3c7] text-[#7f1d1d] border border-[#fde68a] text-xs font-bold px-3 py-1 rounded-full shadow-xs">
+            👩‍🏫 Giáo viên hướng dẫn: Cô Quyên
+          </span>
+        </div>
 
         <div className="flex flex-col gap-4 text-sm md:text-base text-[#27272a] leading-relaxed">
           <div className="bg-white border border-[#d7caa8] rounded-xl p-4 shadow-xs">
@@ -88,7 +93,7 @@ export const GuideScreen: React.FC<GuideScreenProps> = ({ onBack, speakingId }) 
             title="Nghe đọc quy tắc chơi bằng giọng nữ Hà Nội"
           >
             <Volume2 className="w-4 h-4 text-[#d97706]" />
-            <span>{isGuidePlaying ? 'Đang đọc thể lệ...' : 'Nghe thể lệ (Giọng nữ Hà Nội)'}</span>
+            <span>{isGuidePlaying ? 'Đang đọc thể lệ...' : '🎙️ Nghe Cô Quyên đọc thể lệ'}</span>
           </button>
 
           <button

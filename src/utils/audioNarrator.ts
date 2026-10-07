@@ -22,7 +22,7 @@ class AudioNarrator {
   private currentAudioElement: HTMLAudioElement | null = null;
   private isSpeaking: boolean = false;
   private currentActiveId: string | null = null;
-  private playbackRate: number = 1.0;
+  private playbackRate: number = 1.2;
   private selectedBrowserVoice: SpeechSynthesisVoice | null = null;
   private listeners: Set<SubtitleListener> = new Set();
   private subtitleState: SubtitleState = {
@@ -148,7 +148,7 @@ class AudioNarrator {
 
     this.stop();
 
-    const title = options.title || 'CÔ GIÁO THUYẾT MINH (GIỌNG NỮ MIỀN BẮC HÀ NỘI)';
+    const title = options.title || 'CÔ QUYÊN THUYẾT MINH (GIỌNG NỮ MIỀN BẮC HÀ NỘI)';
     this.isSpeaking = true;
     this.currentActiveId = options.audioId || 'dynamic';
 

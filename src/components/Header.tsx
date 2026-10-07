@@ -46,7 +46,7 @@ export const Header: React.FC<HeaderProps> = ({ currentScreen, onNavigate }) => 
 
   const handleRateCycle = () => {
     soundFx.playClick();
-    const nextRate = playbackRate === 1.0 ? 1.15 : playbackRate === 1.15 ? 0.85 : 1.0;
+    const nextRate = playbackRate === 1.2 ? 1.35 : playbackRate === 1.35 ? 1.0 : 1.2;
     setPlaybackRate(nextRate);
     narrator.setPlaybackRate(nextRate);
   };
@@ -58,11 +58,16 @@ export const Header: React.FC<HeaderProps> = ({ currentScreen, onNavigate }) => 
           <Mic className="w-6 h-6" />
         </div>
         <div>
-          <h1 className="font-serif-title text-xl md:text-2xl font-bold text-[#7f1d1d] tracking-wide">
-            MỞ KHÓA TIẾNG NÓI CÔNG LÍ
-          </h1>
+          <div className="flex items-center gap-2 flex-wrap">
+            <h1 className="font-serif-title text-xl md:text-2xl font-bold text-[#7f1d1d] tracking-wide">
+              MỞ KHÓA TIẾNG NÓI CÔNG LÍ
+            </h1>
+            <span className="bg-[#fef3c7] text-[#92400e] border border-[#fde68a] text-xs font-bold px-2.5 py-0.5 rounded-full inline-flex items-center gap-1 shadow-xs">
+              👩‍🏫 Cô Quyên
+            </span>
+          </div>
           <p className="text-xs md:text-sm text-[#57534e] font-medium">
-            Luyện tập Tiết 1: "Tôi có một ước mơ" - M.L. King (Ngữ văn 11)
+            Luyện tập Tiết 1: "Tôi có một ước mơ" - M.L. King (Ngữ văn 11) • GV: Cô Quyên
           </p>
         </div>
       </div>
@@ -103,7 +108,7 @@ export const Header: React.FC<HeaderProps> = ({ currentScreen, onNavigate }) => 
         <button
           onClick={handleRateCycle}
           className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs md:text-sm font-semibold border bg-[#f5f0e6] border-[#d7caa8] text-[#27272a] hover:bg-[#ebe3d3] transition"
-          title="Tốc độ giọng đọc AI (0.85x, 1.0x, 1.15x)"
+          title="Tốc độ giọng đọc Cô Quyên (1.0x, 1.2x, 1.35x)"
         >
           <Gauge className="w-4 h-4 text-[#d97706]" />
           <span>{playbackRate}x</span>

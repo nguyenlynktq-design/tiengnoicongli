@@ -28,7 +28,7 @@ export const TeacherScoringPanel: React.FC<TeacherScoringPanelProps> = ({
     <div className="bg-[#f6efe1] border-2 border-[#ded3bd] rounded-2xl p-4 mt-5">
       <div className="font-serif-title text-sm md:text-base font-bold text-[#7f1d1d] mb-2.5 flex items-center gap-2">
         <Award className="w-5 h-5 text-[#d97706]" />
-        <span>Bàn điều khiển Giáo viên: Chấm điểm & Mở khóa</span>
+        <span>Bàn điều khiển Giáo viên (Cô Quyên): Chấm điểm & Mở khóa</span>
       </div>
 
       {/* Grid of 4 teams */}
