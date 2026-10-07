@@ -1,0 +1,8 @@
+{
+  "name": "Remix Mở khóa tiếng nói công lí - Tôi có một ước mơ (Ngữ văn 11)",
+  "description": "Ứng dụng tương tác luyện tập và vận dụng bài học \u0027Tôi có một ước mơ\u0027 (M.L. King) với 4 ổ khóa kiến thức, thắp sáng micro diễn văn, chấm điểm thi đua 4 đội và thuyết minh bằng giọng nói AI tiếng Việt miền Bắc chuẩn xác.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
